@@ -1,14 +1,21 @@
-import { simpleCircleRenderer } from "lib/renderers";
+import { simpleCircleRenderer, colourSeparation } from "lib/renderers";
 import { renderFactory } from "lib/factories";
 document.addEventListener("DOMContentLoaded", () => {
   //simpleMouseTrack("rootMouseTrack");
 
-  const { play, pause } = renderFactory(simpleCircleRenderer)(
+  const { play, pause } = renderFactory(colourSeparation(['img/blue.png','two']))(
     "root",
     100,
     100,
     true
   );
+  
+  // const { play, pause } = renderFactory(simpleCircleRenderer)(
+  //   "root",
+  //   100,
+  //   100,
+  //   true
+  // );
 
   //console.log("renderFactory ", fact);
 
